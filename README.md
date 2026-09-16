@@ -18,31 +18,31 @@ SDG-focused educational content.
 
 ## 🌿 Project Preview
 
-![SmartSort home page](smartsort-home.png)
+![SmartSort home page](assets/assets/smartsort-home.png)
 
 ### Waste category explorer
 
-![SmartSort category explorer](smartsort-categories.png)
+![SmartSort category explorer](assets/assets/smartsort-categories.png)
 
 ### Classification result
 
-![SmartSort classification result](smartsort-result.png)
+![SmartSort classification result](assets/assets/smartsort-result.png)
 
 ### How SmartSort works
 
-![SmartSort how it works section](smartsort-how-it-works.png)
+![SmartSort how it works section](assets/assets/smartsort-how-it-works.png)
 
 ### Recent searches
 
-![SmartSort recent searches](smartsort-recent-searches.png)
+![SmartSort recent searches](assets/assets/smartsort-recent-searches.png)
 
 ### SDG 11 impact
 
-![SmartSort SDG 11 section](smartsort-sdg11.png)
+![SmartSort SDG 11 section](assets/assets/smartsort-sdg11.png)
 
 ### Transparency and responsible guidance
 
-![SmartSort transparency section](smartsort-transparency.png)
+![SmartSort transparency section](assets/assets/smartsort-transparency.png)
 
 ------------------------------------------------------------------------
 
