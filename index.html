@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="SmartSort helps you understand where everyday waste belongs."
+    >
+
+    <meta
+        name="theme-color"
+        content="#173f35"
+    >
+
+    <title>SmartSort | Know It. Sort It. Sustain It.</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar container">
+
+            <a href="#home" class="logo" aria-label="SmartSort Home">
+                <span class="logo-mark">S</span>
+
+                <span class="logo-text">
+                    Smart<span>Sort</span>
+                </span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#categories" class="nav-link">
+                    Categories
+                </a>
+
+                <a href="#how-it-works" class="nav-link">
+                    How It Works
+                </a>
+
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+                    <span id="themeIcon">☾</span>
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================================
+             HERO SECTION
+        ========================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-background-shape shape-one"></div>
+            <div class="hero-background-shape shape-two"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Smart waste awareness
+                    </div>
+
+                    <h1>
+                        Where does your
+                        <span>waste</span>
+                        belong?
+                    </h1>
+
+                    <p class="hero-description">
+                        Search an everyday item and discover its
+                        SmartSort category, along with simple guidance
+                        for handling it responsibly.
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH + QUICK CATEGORY ACCESS -->
+
+                <div class="hero-action-layout">
+
+                    <div class="hero-search-column">
+
+                        <!-- SEARCH BOX -->
+                        <div class="search-wrapper">
+
+                            <form
+                                class="search-form"
+                                id="searchForm"
+                                autocomplete="off"
+                            >
+
+                                <div class="search-input-container">
+
+                                    <span
+                                        class="search-icon"
+                                        aria-hidden="true"
+                                    >
+                                        🔍
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        class="search-input"
+                                        placeholder="Try “plastic bottle” or “banana peel”..."
+                                        aria-label="Search for a waste item"
+                                        aria-autocomplete="list"
+                                        aria-controls="suggestions"
+                                        aria-expanded="false"
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="clear-search"
+                                        id="clearSearch"
+                                        aria-label="Clear search"
+                                        title="Clear search"
+                                    >
+                                        ×
+                                    </button>
+
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="search-button"
+                                    id="searchButton"
+                                >
+                                    Search
+                                    <span aria-hidden="true">→</span>
+                                </button>
+
+                            </form>
+
+                            <!-- AUTOCOMPLETE -->
+                            <div
+                                class="suggestions"
+                                id="suggestions"
+                                role="listbox"
+                                aria-label="Search suggestions"
+                            ></div>
+
+                            <!-- EMPTY SEARCH MESSAGE -->
+                            <p
+                                class="search-message"
+                                id="searchMessage"
+                                aria-live="polite"
+                            ></p>
+
+                        </div>
+
+                        <!-- POPULAR SEARCHES -->
+                        <div class="popular-searches">
+
+                            <span class="popular-label">Try:</span>
+
+                            <button type="button" class="popular-item" data-search="banana peel">
+                                🍌 Banana Peel
+                            </button>
+
+                            <button type="button" class="popular-item" data-search="plastic bottle">
+                                🧴 Plastic Bottle
+                            </button>
+
+                            <button type="button" class="popular-item" data-search="mobile phone">
+                                📱 Mobile Phone
+                            </button>
+
+                            <button type="button" class="popular-item" data-search="battery">
+                                🔋 Battery
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- QUICK CATEGORY BUTTONS -->
+                    <aside class="hero-category-shortcuts" aria-label="Quick waste category navigation">
+                        <span class="hero-category-label">Explore categories</span>
+
+                        <button type="button" class="hero-category-button" data-target-category="Wet">
+                            <span class="hero-category-icon">🥑</span>
+                            <span>Wet</span>
+                            <span class="hero-category-arrow" aria-hidden="true">→</span>
+                        </button>
+
+                        <button type="button" class="hero-category-button" data-target-category="Dry">
+                            <span class="hero-category-icon">📦</span>
+                            <span>Dry</span>
+                            <span class="hero-category-arrow" aria-hidden="true">→</span>
+                        </button>
+
+                        <button type="button" class="hero-category-button" data-target-category="Recyclable">
+                            <span class="hero-category-icon">♻️</span>
+                            <span>Recyclable</span>
+                            <span class="hero-category-arrow" aria-hidden="true">→</span>
+                        </button>
+
+                        <button type="button" class="hero-category-button" data-target-category="E-Waste">
+                            <span class="hero-category-icon">💻</span>
+                            <span>E-Waste</span>
+                            <span class="hero-category-arrow" aria-hidden="true">→</span>
+                        </button>
+
+                        <button type="button" class="hero-category-button" data-target-category="Special Handling">
+                            <span class="hero-category-icon">⚠️</span>
+                            <span>Special</span>
+                            <span class="hero-category-arrow" aria-hidden="true">→</span>
+                        </button>
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RESULT SECTION
+        ========================================== -->
+
+        <section
+            class="result-section"
+            id="resultSection"
+        >
+
+            <div class="container">
+
+                <!-- Result heading -->
+
+                <div class="section-heading result-heading">
+
+                    <div>
+                        <span class="section-label">
+                            Your result
+                        </span>
+
+                        <h2>
+                            Here's where it belongs
+                        </h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="clearResult"
+                    >
+                        Clear result
+                    </button>
+
+                </div>
+
+
+                <!-- RESULT CARD -->
+
+                <div
+                    class="result-card"
+                    id="resultCard"
+                >
+
+                    <div class="result-main">
+
+                        <div
+                            class="result-icon"
+                            id="resultIcon"
+                        >
+                            ♻️
+                        </div>
+
+                        <div class="result-info">
+
+                            <span
+                                class="result-category"
+                                id="resultCategory"
+                            >
+                                RECYCLABLE
+                            </span>
+
+                            <h3 id="resultName">
+                                Plastic Bottle
+                            </h3>
+
+                            <p id="resultDescription">
+                                A commonly collected recyclable material
+                                when accepted locally.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-details">
+
+                        <div class="detail-box">
+
+                            <div class="detail-icon">
+                                💡
+                            </div>
+
+                            <div>
+                                <h4>Why?</h4>
+
+                                <p id="resultWhy">
+                                    This item is classified according
+                                    to the SmartSort prototype dataset.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-box">
+
+                            <div class="detail-icon">
+                                ♻️
+                            </div>
+
+                            <div>
+                                <h4>What to do</h4>
+
+                                <p id="resultDisposal">
+                                    Follow the appropriate local
+                                    recycling or dry-waste collection
+                                    guidance.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SPECIAL HANDLING NOTICE -->
+
+                    <div
+                        class="special-notice"
+                        id="specialNotice"
+                    >
+
+                        <span class="special-notice-icon">
+                            ⚠️
+                        </span>
+
+                        <div>
+                            <strong>
+                                Special handling required
+                            </strong>
+
+                            <p>
+                                Keep this item separate from ordinary
+                                household waste and follow appropriate
+                                authorised collection guidance.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             UNKNOWN / NOT FOUND SECTION
+        ========================================== -->
+
+        <section
+            class="not-found-section"
+            id="notFoundSection"
+        >
+
+            <div class="container">
+
+                <div class="not-found-card">
+
+                    <div class="not-found-icon">
+                        🔎
+                    </div>
+
+                    <div class="not-found-content">
+
+                        <span class="section-label">
+                            No exact match
+                        </span>
+
+                        <h2>
+                            We couldn't find that item.
+                        </h2>
+
+                        <p>
+                            Try another name or choose one of the
+                            suggested items below.
+                        </p>
+
+                        <div
+                            class="alternative-suggestions"
+                            id="alternativeSuggestions"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CATEGORY EXPLORER
+        ========================================== -->
+
+        <section
+            class="categories-section"
+            id="categories"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        Explore
+                    </span>
+
+                    <h2>
+                        Waste categories
+                    </h2>
+
+                    <p>
+                        Explore the categories used by the
+                        SmartSort prototype.
+                    </p>
+
+                </div>
+
+
+                <!-- FILTER BUTTONS -->
+
+                <div
+                    class="category-filters"
+                    id="categoryFilters"
+                    role="tablist"
+                    aria-label="Waste categories"
+                >
+
+                  <button
+                      type="button"
+                      class="category-filter active"
+                      data-category="All"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      All
+                   </button>
+
+                   <button
+                      type="button"
+                      class="category-filter"
+                      data-category="Wet"
+                      role="tab"
+                      aria-selected="false"
+                    >
+                      🥑 Wet (<span data-category-count="Wet">0</span>)
+                    </button>
+
+                    <button
+                       type="button"
+                       class="category-filter"
+                       data-category="Dry"
+                       role="tab"
+                       aria-selected="false"
+                    >
+                       📦 Dry (<span data-category-count="Dry">0</span>)
+                    </button>
+
+                    <button
+                       type="button"
+                       class="category-filter"
+                       data-category="Recyclable"
+                       role="tab"
+                       aria-selected="false"
+                    >
+                       ♻️ Recyclable (<span data-category-count="Recyclable">0</span>)
+                    </button>
+
+                    <button
+                        type="button"
+                        class="category-filter"
+                        data-category="E-Waste"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        💻 E-Waste (<span data-category-count="E-Waste">0</span>)
+                    </button>
+
+                    <button
+                       type="button"
+                       class="category-filter"
+                       data-category="Special Handling"
+                       role="tab"
+                       aria-selected="false"
+                    >
+                       ⚠️ Special (<span data-category-count="Special Handling">0</span>)
+                    </button>  
+
+                </div>
+
+                <!-- Sustainability Info Banner -->
+                <div class="sustainability-banner" style="margin: 20px auto; padding: 15px; max-width: 800px; border-radius: 8px; background-color: rgba(255,255,255,0.05); text-align: center; color: #a3e635; font-weight: 500;">
+                    🌱 <span id="sustainabilityFact">Loading sustainability tip...</span>
+                </div>
+                <!-- CATEGORY ITEMS -->
+
+                <div
+                    class="category-grid"
+                    id="categoryGrid"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             HOW IT WORKS
+        ========================================== -->
+
+        <section
+            class="how-section"
+            id="how-it-works"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        Simple by design
+                    </span>
+
+                    <h2>
+                        How SmartSort works
+                    </h2>
+
+                    <p>
+                        Three simple steps to make waste decisions
+                        easier.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            🔍
+                        </div>
+
+                        <h3>
+                            Search
+                        </h3>
+
+                        <p>
+                            Enter the item you want to dispose of.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            🧠
+                        </div>
+
+                        <h3>
+                            Classify
+                        </h3>
+
+                        <p>
+                            SmartSort searches its structured
+                            waste dataset for a match.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            🌱
+                        </div>
+
+                        <h3>
+                            Act
+                        </h3>
+
+                        <p>
+                            Get a simple category and responsible
+                            handling guidance.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RECENT SEARCHES
+        ========================================== -->
+
+        <section
+            class="recent-section"
+            id="recentSection"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            Your activity
+                        </span>
+
+                        <h2>
+                            Recent searches
+                        </h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="clearHistory"
+                    >
+                        Clear history
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="recent-searches"
+                    id="recentSearches"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SDG 11 SECTION
+        ========================================== -->
+
+        <section
+            class="sdg-section"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="sdg-card">
+
+                    <div class="sdg-content">
+
+                        <span class="section-label">
+                            Our impact
+                        </span>
+
+                        <h2>
+                            Small sorting decisions.
+                            <span>Better cities.</span>
+                        </h2>
+
+                        <p>
+                            SmartSort is designed as an educational
+                            prototype supporting awareness around
+                            waste segregation and responsible waste
+                            management.
+                        </p>
+
+                        <p>
+                            The project connects with
+                            <strong>UN Sustainable Development Goal 11</strong>,
+                            particularly Target 11.6, which focuses on
+                            reducing the environmental impact of cities,
+                            including through better municipal waste
+                            management.
+                        </p>
+
+                        <div class="sdg-badge">
+                            <span class="sdg-number">
+                                11
+                            </span>
+
+                            <span>
+                                Sustainable Cities
+                                & Communities
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sdg-visual">
+
+                        <div class="impact-circle circle-large">
+                            <span>🌍</span>
+                        </div>
+
+                        <div class="impact-circle circle-small one">
+                            ♻️
+                        </div>
+
+                        <div class="impact-circle circle-small two">
+                            🌱
+                        </div>
+
+                        <div class="impact-circle circle-small three">
+                            🏙️
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SOURCES / DISCLAIMER
+        ========================================== -->
+
+        <section class="sources-section">
+
+            <div class="container">
+
+                <div class="sources-card">
+
+                    <div class="sources-heading">
+
+                        <span class="section-label">
+                            Transparency
+                        </span>
+
+                        <h2>
+                            Built with responsible guidance
+                        </h2>
+
+                    </div>
+
+                    <div class="sources-content">
+
+                        <p>
+                            SmartSort is an educational hackathon
+                            prototype. Its classifications are based
+                            on the prototype dataset and are intended
+                            to help users understand waste categories.
+                        </p>
+
+                        <p>
+                            Actual waste-management requirements,
+                            collection systems and recycling options
+                            may vary by local authority. Items requiring
+                            special handling should follow applicable
+                            local guidance and authorised collection
+                            channels.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+
+                    <span class="logo-mark">
+                        S
+                    </span>
+
+                    <span class="logo-text">
+                        Smart<span>Sort</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Know it. Sort it. Sustain it.
+                </p>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <p>
+                    Built for SDG 11
+                </p>
+
+                <p class="copyright">
+                    ©️ 2026 SmartSort
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+    <!-- Quick category navigation: reuses the original category filter buttons -->
+    <script>
+        document.querySelectorAll(".hero-category-button").forEach((button) => {
+            button.addEventListener("click", () => {
+                const category = button.dataset.targetCategory;
+                const originalFilter = document.querySelector(
+                    `#categoryFilters .category-filter[data-category="${category}"]`
+                );
+
+                if (originalFilter) {
+                    originalFilter.click();
+                    document.getElementById("categories").scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
